@@ -30,11 +30,11 @@ jobs:
          uses: appleboy/ssh-action@master
          with:
            host: ${{ secrets.HOST }}
-               username: ${{ secrets.USERNAME }}
-               key: ${{ secrets.PRIVATE_KEY }}
-               port: ${{ secrets.PORT }}
-               passphrase: ${{ secrets.PASS }}
-               script: |
-                  mkdir -p /root/deploy
-                  docker run -dit -p 8080:80 --restart always --name cont_web
+           username: ${{ secrets.USERNAME }}
+           key: ${{ secrets.PRIVATE_KEY }}
+           port: ${{ secrets.PORT }}
+           passphrase: ${{ secrets.PASS }}
+           script: |
+              mkdir -p /root/deploy
+              docker run -dit -p 8080:80 --restart always --name cont_web
 farahblog/webapp:latest
