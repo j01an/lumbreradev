@@ -35,6 +35,5 @@ jobs:
            port: ${{ secrets.PORT }}
            passphrase: ${{ secrets.PASS }}
            script: |
-              ls -ls
               mkdir -p /root/deploy
               docker run -dit -p 8080:80 --restart always --name cont_web j01an/webapp:latest
